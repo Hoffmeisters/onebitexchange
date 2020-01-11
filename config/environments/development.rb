@@ -58,4 +58,8 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  #Para testes apenas
+  ENV["CURRECY_API_URL"] = 'https://currencydatafeed.com/api/data.php'
+  ENV["CURRECY_API_KEY"] = 'jkfj6o3q0lptssd4m7hy'
 end
