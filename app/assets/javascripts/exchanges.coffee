@@ -5,7 +5,20 @@ $(document).ready ->
   #   if $('form').attr('action') == '/convert'
   #     goToExchange()
 
+  $('#source_currency').change ->
+    goToExchange()
+  
+  $('#target_currency').change ->
+    goToExchange()
+
   $('#amount').change ->
+    goToExchange()
+
+  $('#btn-transfer').click ->
+    source_currency_val = $("#source_currency").val()
+    target_currency_val = $("#target_currency").val()
+    $("#source_currency").val(target_currency_val)
+    $("#target_currency").val(source_currency_val)
     goToExchange()
 
   goToExchange = ->
@@ -23,9 +36,4 @@ $(document).ready ->
             $('#result').val(data.value)
         return false; 
 
-  $('#btn-transfer').click ->
-    source_currency_val = $("#source_currency").val()
-    target_currency_val = $("#target_currency").val()
-    $("#source_currency").val(target_currency_val)
-    $("#target_currency").val(source_currency_val)
-  return
+  

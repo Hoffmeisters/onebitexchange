@@ -62,4 +62,5 @@ Rails.application.configure do
   #Para testes apenas
   ENV["CURRECY_API_URL"] = 'https://currencydatafeed.com/api/data.php'
   ENV["CURRECY_API_KEY"] = 'jkfj6o3q0lptssd4m7hy'
+  ENV["CURRECY_BTC_API_URL"] = 'https://blockchain.info'
 end
