@@ -1,4 +1,5 @@
 {
+  "engines" : { "node" : ">=6" },
   "name": "one-bit-exchange",
   "private": true,
   "dependencies": {
