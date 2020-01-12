@@ -21,8 +21,8 @@
         <div class='destination_currency'>
           <div class='form-group'>
             <p class='title'>Moeda Pretendida
-              <button type="button" id="btn-transfer" class="btn btn-default btn-sm">
-                <span class="glyphicon glyphicon-transfer"></span> 
+              <button type="button" id="btn-transfer" class="btn btn-default btn-sm icon">
+                <span class="glyphicon glyphicon-transfer icon"></span> 
               </button>
             </p>
             <%= select_tag 'target_currency', options_for_select(currency_list, 'EUR'), class: 'form-control', id: 'target_currency'%>
@@ -31,9 +31,9 @@
             <input type='text' id='result' name='result' class='form-control' placeholder='Resultado' readonly>
           </div>
         </div>
-        <div>
+        <%# <div>
           <button type='submit' class='btn btn-primary btn-exchange col-md-12'>CONVERTER</button>
-        </div>
+        </div> %>
       <% end %>
     </div>
   </div>

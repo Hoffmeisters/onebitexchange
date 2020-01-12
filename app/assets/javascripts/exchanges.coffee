@@ -1,8 +1,15 @@
 $(document).ready ->
 
-  $('form').submit ->
-    if $('form').attr('action') == '/convert'
-      $.ajax '/convert',
+  # não é necessário
+  # $('form').submit ->
+  #   if $('form').attr('action') == '/convert'
+  #     goToExchange()
+
+  $('#amount').change ->
+    goToExchange()
+
+  goToExchange = ->
+    $.ajax '/convert',
           type: 'GET'
           dataType: 'json'
           data: {
