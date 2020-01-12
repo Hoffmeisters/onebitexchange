@@ -15,3 +15,10 @@ $(document).ready ->
           success: (data, text, jqXHR) ->
             $('#result').val(data.value)
         return false; 
+
+  $('#btn-transfer').click ->
+    source_currency_val = $("#source_currency").val()
+    target_currency_val = $("#target_currency").val()
+    $("#source_currency").val(target_currency_val)
+    $("#target_currency").val(source_currency_val)
+  return
